@@ -83,3 +83,6 @@ print("Курица в небе?",chiken1.flying)
 chiken1.fly(True)
 print("Курица в небе?",chiken1.flying)
 print("Сколько у курицы крыльев?",chiken1.wings)
+chiken1 = Pigs()# а как вот это объяснить? получается предыдущий chiken1 =
+                # Chikens() был удален сборщиком мусора
+print(chiken1 is chiken1)

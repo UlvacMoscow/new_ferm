@@ -3,7 +3,7 @@ class Animals:
     eyes = 2
     name = None
 
-    def __init__(self,name,weight):
+    def __init__(self, name, weight):
         self.name = name
         self.weight = weight
 
@@ -91,8 +91,6 @@ print("Курица в небе?", chiken1.flying)
 chiken1.fly(True)
 print("Курица в небе?", chiken1.flying)
 print("Сколько у курицы крыльев?", chiken1.wings)
-
-
 
 pig2 = Pigs('pig2', 120)
 print('Имя свиньи', pig2.name, 'и ее вес', pig2.weight)

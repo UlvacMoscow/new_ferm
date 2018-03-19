@@ -1,6 +1,14 @@
 class Animals:
-    weight = 0
+    weight = 0 #kg
     eyes = 2
+    name = None
+
+    def __init__(self,name,weight):
+        self.name = name
+        self.weight = weight
+
+    def name_animall (self, name):
+        self.name = name
 
     def weight_animal(self, amount):
         self.weight += amount
@@ -54,35 +62,37 @@ class Geese(Birds):
     def voice_gees(self):
         print("ggooooogggoooooo")
 
-pig1 = Pigs()
-print("вес свиньи:",pig1.weight)
+pig1 = Pigs('pig1', 100)
+print("вес свиньи:", pig1.weight)
 pig1.weight_animal(100)
-print("вес свиньи:",pig1.weight)
+print("вес свиньи:", pig1.weight)
 pig1.voice_pig()
 pig1.Toilet()
-print("вес свиньи:",pig1.weight)
+print("вес свиньи:", pig1.weight)
 
-goat1 = Goats()
-print("вес козла:",goat1.weight)
-print("Сколько копыт у козла",Goats.hooves,"А сколько глаз у козла?",Goats.eyes)
+goat1 = Goats('goat!', 10)
+print("вес козла:", goat1.weight)
+print("Сколько копыт у козла", Goats.hooves, "А сколько глаз у козла?", Goats.eyes)
 goat1.weight_animal(20)
-print("вес козла:",goat1.weight)
+print("вес козла:" ,goat1.weight)
 goat1.voice_goat()
 
-gees1 = Geese()
+gees1 = Geese('gees1' ,5)
 gees1.voice_gees()
-print("Гусь в небе?",gees1.flying)
+print("Гусь в небе?" ,gees1.flying)
 gees1.fly(True)
-print("Гусь в небе?",gees1.flying,"Сколько глаз у гуся?",gees1.eyes)
+print("Гусь в небе?", gees1.flying, "Сколько глаз у гуся?", gees1.eyes)
 gees1.weight_animal(10)
-print("Сколько гусь весит?",gees1.weight)
+print("Сколько гусь весит?", gees1.weight)
 
-chiken1 = Chikens()
+chiken1 = Chikens('chiken1', 14)
 chiken1.voice_chiken()
-print("Курица в небе?",chiken1.flying)
+print("Курица в небе?", chiken1.flying)
 chiken1.fly(True)
-print("Курица в небе?",chiken1.flying)
-print("Сколько у курицы крыльев?",chiken1.wings)
-chiken1 = Pigs()# а как вот это объяснить? получается предыдущий chiken1 =
-                # Chikens() был удален сборщиком мусора
-print(chiken1 is chiken1)
+print("Курица в небе?", chiken1.flying)
+print("Сколько у курицы крыльев?", chiken1.wings)
+
+
+
+pig2 = Pigs('pig2', 120)
+print('Имя свиньи', pig2.name, 'и ее вес', pig2.weight)
